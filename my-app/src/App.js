@@ -6,8 +6,10 @@ import sidebar_menu from './Admin/constants/sidebar-menu';
 
 import './App.css';
 
-import Products from './Admin/pages/Products';
+import Books from './Admin/pages/Books';
 import Orders from './Admin/pages/Orders';
+import Categories from './Admin/pages/Category';
+import Users from './Admin/pages/Users';
 
 function App () {
   return(
@@ -19,7 +21,9 @@ function App () {
               <Routes>
                   <Route path="*" element={<div></div>} />
                   <Route exact path="/" element={<div></div>} />
-                  <Route exact path="/products" element={<Products/>} />
+                  <Route exact path="/books" element={<Books/>} />
+                  <Route exact path="/categories" element={<Categories/>} />
+                  <Route exact path="/users" element={<Users/>} />
                   <Route exact path="/orders" element={<Orders/>} />
                   <Route exact path="/profile" element={<div></div>} />
               </Routes>

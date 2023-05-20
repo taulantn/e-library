@@ -1,35 +1,32 @@
 import React, {useState, useEffect} from 'react';
 import DashboardHeader from '../../components/DashboardHeader';
 
-import all_orders from '../../constants/orders';
+import all_users from '../../constants/users';
 import {calculateRange, sliceData} from '../../utils/table-pagination';
 
 import '../styles.css';
-import DoneIcon from '../../assets/icons/done.svg';
-import CancelIcon from '../../assets/icons/cancel.svg';
-import RefundedIcon from '../../assets/icons/refunded.svg';
 
-function Orders () {
+function Users () {
     const [search, setSearch] = useState('');
-    const [orders, setOrders] = useState(all_orders);
+    const [users, setUsers] = useState(all_users);
     const [page, setPage] = useState(1);
     const [pagination, setPagination] = useState([]);
 
     useEffect(() => {
-        setPagination(calculateRange(all_orders, 5));
-        setOrders(sliceData(all_orders, page, 5));
+        setPagination(calculateRange(all_users, 5));
+        setUsers(sliceData(all_users, page, 5));
     }, []);
 
     // Search
     const __handleSearch = (event) => {
         setSearch(event.target.value);
         if (event.target.value !== '') {
-            let search_results = all_orders.filter((item) =>
+            let search_results = all_users.filter((item) =>
                 item.first_name.toLowerCase().includes(search.toLowerCase()) ||
                 item.last_name.toLowerCase().includes(search.toLowerCase()) ||
-                item.product.toLowerCase().includes(search.toLowerCase())
+                item.email.toLowerCase().includes(search.toLowerCase())
             );
-            setOrders(sliceData(search_results, page, 5));
+            setUsers(sliceData(search_results, page, 5));
         }
         else {
             __handleChangePage(1);
@@ -39,17 +36,17 @@ function Orders () {
     // Change Page 
     const __handleChangePage = (new_page) => {
         setPage(new_page);
-        setOrders(sliceData(all_orders, new_page, 5));
+        setUsers(sliceData(all_users, new_page, 5));
     }
 
     return(
         <div className='dashboard-content'>
             <DashboardHeader
-                btnText="Orders" />
+                btnText="New User" />
 
             <div className='dashboard-content-container'>
                 <div className='dashboard-content-header'>
-                    <h2>Orders List</h2>
+                    <h2>Users List</h2>
                     <div className='dashboard-content-search'>
                         <input
                             type='text'
@@ -63,54 +60,37 @@ function Orders () {
                 <table>
                     <thead>
                         <th>ID</th>
-                        <th>DATE</th>
-                        <th>STATUS</th>
-                        <th>COSTUMER</th>
-                        <th>PRODUCT</th>
-                        <th>REVENUE</th>
+                        <th>EMAIL</th>
+                        <th>NAME</th>
+                        <th>LAST NAME</th>
+                        <th>AVATAR</th>
+                        <th>BIRTHDAY</th>
+                        <th>ADRESS</th>
                         <th>OPTIONS</th>
 
                     </thead>
 
-                    {orders.length !== 0 ?
+                    {users.length !== 0 ?
                         <tbody>
-                            {orders.map((order, index) => (
+                            {users.map((user, index) => (
                                 <tr key={index}>
-                                    <td><span>{order.id}</span></td>
-                                    <td><span>{order.date}</span></td>
-                                    <td>
-                                        <div>
-                                            {order.status === 'Paid' ?
-                                                <img
-                                                    src={DoneIcon}
-                                                    alt='paid-icon'
-                                                    className='dashboard-content-icon' />
-                                            : order.status === 'Canceled' ?
-                                                <img
-                                                    src={CancelIcon}
-                                                    alt='canceled-icon'
-                                                    className='dashboard-content-icon' />
-                                            : order.status === 'Refunded' ?
-                                                <img
-                                                    src={RefundedIcon}
-                                                    alt='refunded-icon'
-                                                    className='dashboard-content-icon' />
-                                            : null}
-                                            <span>{order.status}</span>
-                                        </div>
-                                    </td>
+                                    <td><span>{user.id}</span></td>
+                                    <td><span>{user.email}</span></td>
+                                    <td><span>{user.first_name}</span></td>
+                                    <td><span>{user.last_name}</span></td>
                                     <td>
                                         <div>
                                             <img 
-                                                src={order.avatar}
+                                                src={user.avatar}
                                                 className='dashboard-content-avatar'
-                                                alt={order.first_name + ' ' +order.last_name} />
-                                            <span>{order.first_name} {order.last_name}</span>
+                                                alt={user.first_name + ' ' +user.last_name} />
+                                            
                                         </div>
                                     </td>
-                                    <td><span>{order.product}</span></td>
-                                    <td><span>${order.price}</span></td>
+                                    <td><span>{user.birthday}</span></td>
+                                    <td><span>{user.adress}</span></td>
                                     <td><span><button className='delete-btn'>Delete</button>
+                                    <button className='edit-btn'>Block</button>
                                     </span></td>
                                 </tr>
                             ))}
@@ -118,7 +98,7 @@ function Orders () {
                     : null}
                 </table>
 
-                {orders.length !== 0 ?
+                {users.length !== 0 ?
                     <div className='dashboard-content-footer'>
                         {pagination.map((item, index) => (
                             <span 
@@ -139,4 +119,4 @@ function Orders () {
     )
 }
 
-export default Orders;
+export default Users;

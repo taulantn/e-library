@@ -152,3 +152,34 @@ td span {
     font-weight: 700;
     border-color: #FFFFFF;
 }
+.delete-btn{
+    
+        padding: 0.8em;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+        cursor: pointer;
+        color: #FFFFFF;
+        font-size: 0.85em;
+        font-weight: 700;
+        border-radius: 8px;
+        text-transform: uppercase;
+        border: 1px solid #920101;
+        background-color: #920101;
+    
+}
+
+.edit-btn{
+    
+    padding: 0.8em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    cursor: pointer;
+    color: #FFFFFF;
+    font-size: 0.85em;
+    font-weight: 700;
+    border-radius: 8px;
+    text-transform: uppercase;
+    border: 1px solid #c04a00;
+    background-color: #c04a00;
+    margin-left: 0.3rem;
+}

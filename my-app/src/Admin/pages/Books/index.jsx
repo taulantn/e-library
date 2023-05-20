@@ -6,7 +6,7 @@ import {calculateRange, sliceData} from '../../utils/table-pagination';
 
 import '../styles.css';
 
-function Products () {
+function Books () {
     const [search, setSearch] = useState('');
     const [books, setBooks] = useState(all_books);
     const [page, setPage] = useState(1);
@@ -68,6 +68,8 @@ function Products () {
                         <th>LANGUAGE</th>
                         <th>REVENUE</th>
                         <th>DESCRIPTION</th>
+                        <th>OPTIONS</th>
+
                     </thead>
 
                     {books.length !== 0 ?
@@ -90,6 +92,8 @@ function Products () {
                                     <td><span>{books.language}</span></td>
                                     <td><span>${books.price}</span></td>
                                     <td><span>{books.description}</span></td>
+                                    <td><span><button className='delete-btn'>Delete</button>
+                                    <button className='edit-btn'>Edit</button></span></td>
                                 </tr>
                             ))}
                         </tbody>
@@ -117,4 +121,4 @@ function Products () {
     )
 }
 
-export default Products;
+export default Books;
