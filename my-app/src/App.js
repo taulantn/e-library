@@ -6,6 +6,9 @@ import sidebar_menu from './Admin/constants/sidebar-menu';
 
 import './App.css';
 
+import Products from './Admin/pages/Products';
+import Orders from './Admin/pages/Orders';
+
 function App () {
   return(
     <Router>
@@ -16,8 +19,8 @@ function App () {
               <Routes>
                   <Route path="*" element={<div></div>} />
                   <Route exact path="/" element={<div></div>} />
-                  <Route exact path="/books" element={<div></div>} />
-                  <Route exact path="/orders" element={<div></div>} />
+                  <Route exact path="/products" element={<Products/>} />
+                  <Route exact path="/orders" element={<Orders/>} />
                   <Route exact path="/profile" element={<div></div>} />
               </Routes>
           </div>

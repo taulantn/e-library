@@ -12,8 +12,8 @@ const sidebar_menu = [
     },{
         id: 2,
         icon: BookIcon,
-        path: '/books',
-        title: 'Books',
+        path: '/products',
+        title: 'Products',
     },
     {
         id: 3,
