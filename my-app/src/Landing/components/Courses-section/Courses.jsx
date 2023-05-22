@@ -1,36 +1,36 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
-import courseImg1 from "../../assests/images/davinci.jpg";
-import courseImg2 from "../../assests/images/graphics-design.png";
-import courseImg3 from "../../assests/images/ui-ux.png";
+import courseImg1 from "../../assests/images/where-the.jpg";
+import courseImg2 from "../../assests/images/ends.jpg";
+import courseImg3 from "../../assests/images/verity.jpg";
 import "./courses.css";
 import CourseCard from "./CourseCard";
 
 const coursesData = [
   {
     id: "01",
-    title: "The Davinci Code",
-    lesson: 12,
-    students: 12.5,
-    rating: 5.9,
+    title: "Where the Crawdads Sing",
+    lesson: 368,
+    students: 607.8,
+    rating: 4.4,
     imgUrl: courseImg1,
   },
 
   {
     id: "02",
-    title: "Professional Graphics Design, PhotoShop, Adobe XD, Figma",
-    lesson: 12,
-    students: 12.5,
-    rating: 5.9,
+    title: "It ends with Us",
+    lesson: 384,
+    students: 271.5,
+    rating: 4.7,
     imgUrl: courseImg2,
   },
 
   {
     id: "03",
-    title: "UI/UX BootCamp for Beginners in 2022",
-    lesson: 12,
-    students: 12.5,
-    rating: 5.9,
+    title: "Verity",
+    lesson: 331,
+    students: 276.2,
+    rating: 4.6,
     imgUrl: courseImg3,
   },
 ];

@@ -14,7 +14,7 @@ const footerQuickLinks = [
   },
 
   {
-    display: "Courses",
+    display: "Books",
     url: "#",
   },
 
@@ -52,7 +52,7 @@ const Footer = () => {
         <Row>
           <Col lg="3" md="6" className="mb-4">
             <h2 className=" d-flex align-items-center gap-1">
-              <i class="ri-pantone-line"></i> Learners.
+              <i class="ri-book-mark-line"></i> eLibrary.
             </h2>
 
             <div className="follows">
@@ -114,9 +114,9 @@ const Footer = () => {
           <Col lg="3" md="6">
             <h6 className="fw-bold">Get in Touch</h6>
 
-            <p>Address: Sylhet, Bangladesh</p>
-            <p> Phone: +88 0123456789 </p>
-            <p>Email: example@gmail.com</p>
+            <p>Address: Prishtina, Kosovo</p>
+            <p> Phone: +388 0493456789 </p>
+            <p>Email: info@elibrary.com</p>
           </Col>
         </Row>
       </Container>

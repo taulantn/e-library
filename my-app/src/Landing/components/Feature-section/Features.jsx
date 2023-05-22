@@ -16,7 +16,7 @@ const FeatureData = [
   },
 
   {
-    title: "Certification",
+    title: "Trustful Partner",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum molestias, aperiam doloribus aut sapiente praesentium eos iste dicta amet itaque!",
     icon: "ri-contacts-book-line",
   },

@@ -13,11 +13,11 @@ const navLinks = [
   },
 
   {
-    display: "Courses",
+    display: "Books",
     url: "#",
   },
   {
-    display: "Pages",
+    display: "Courses",
     url: "#",
   },
   {
