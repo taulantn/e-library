@@ -44,7 +44,7 @@ function Categories () {
 
             <div className='dashboard-content-container'>
                 <div className='dashboard-content-header'>
-                    <h2>Orders List</h2>
+                    <h2>Categories List</h2>
                     <div className='dashboard-content-search'>
                         <input
                             type='text'

@@ -11,6 +11,7 @@ import Orders from './Admin/pages/Orders';
 import Categories from './Admin/pages/Category';
 import Users from './Admin/pages/Users';
 import Home from './Landing/pages/Home';
+import DashboardContent from './Admin/pages/Dashboard';
 
 function Dashboard() {
   return (
@@ -18,6 +19,7 @@ function Dashboard() {
       <SideBar menu={sidebar_menu} />
       <div className='dashboard-body'>
         <Routes>
+          <Route exact path="/dashboard" element={<DashboardContent/>} />
           <Route path="/books" element={<Books />} />
           <Route path="/categories" element={<Categories />} />
           <Route path="/users" element={<Users />} />

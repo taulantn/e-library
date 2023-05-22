@@ -183,3 +183,58 @@ td span {
     background-color: #c04a00;
     margin-left: 0.3rem;
 }
+
+.dashboard-card {
+    width: 23%;
+ }
+
+
+.dashboard-card .card{
+   padding: 15px;
+   border-radius: 10px;
+   background-color: #2D83B5;
+}
+
+.dashboard-card .dashboard-card-img{
+    width:200px;
+    height:200px;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+.dashboard-card .card .card-body  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+ }
+
+ .dashboard-card .card .card-body .card-text, .dashboard-card .card .card-body .card-title {
+    color: #F0F2F5;
+ }
+
+ .dashboard-card .card .card-body  button{
+    padding: 0.8em;
+    padding-left: 2em;
+    padding-right: 2em;
+    cursor: pointer;
+    color: #015C92;
+    font-size: 0.9rem;
+    font-weight: 700;
+    border-radius: 8px;
+    text-transform: uppercase;
+    border: 1px solid #eaf7ff;
+    background-color: #eaf7ff;
+    margin-left: auto;
+    margin-right: auto;
+ }
+
+ .dashboard-card-container{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-evenly;
+ }
