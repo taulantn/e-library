@@ -56,6 +56,15 @@
   font-size: 18px;
   background-color: #f0f8ff00;
 }
+.logo{
+  margin-top: 10px;
+  width: 25%;
+}
+
+.logo h2 img{
+  margin-top: 10px;
+  width: 50%;
+}
 
 @media only screen and (max-width: 991px) {
   .nav__menu {
