@@ -12,27 +12,36 @@ const Header = () => {
 
   const navigate = useNavigate();
 
+const navigateToHome = () => {
+  
+  navigate('/');
+};
+
 const navigateToAboutUs = () => {
   // navigate to /users
   navigate('/about-us');
+};
+
+const navigateToBooks = () => {
+  
+  navigate('/');
+};
+
+const navigateToCourses = () => {
+  
+  navigate('/');
 };
 
 const navigateToContact = () => {
   
   navigate('/contact');
 };
-const navigateToHome = () => {
+
+const navigateToLoginSignUp = () => {
   
-  navigate('/');
+  navigate('/login-signup');
 };
-const navigateToBooks = () => {
-  
-  navigate('/');
-};
-const navigateToCourses = () => {
-  
-  navigate('/');
-};
+
 
 const navLinks = [
   {
@@ -56,6 +65,7 @@ const navLinks = [
     display: "Contact",
     url: navigateToContact,
   },
+  
 ];
 
 
@@ -87,7 +97,7 @@ const navLinks = [
 
             <div className="nav__right">
               <p className="mb-0 d-flex align-items-center gap-2">
-              <button className="nav__list-btn" onClick={navigateToLoginSignUp}>Log In / Sign Up</button>
+              <button className="nav__list-btn" id="login-btn" onClick={navigateToLoginSignUp}>Log In / Sign Up</button>
               </p>
             </div>
           </div>

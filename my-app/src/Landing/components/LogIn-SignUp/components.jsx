@@ -67,8 +67,8 @@ import styled from 'styled-components';
 
  export const Button = styled.button`
     border-radius: 20px;
-    border: 1px solid #ff4b2b;
-    background-color: #ff4b2b;
+    border: 1px solid #1eb2a6;
+    background-color: #1eb2a6;
     color: #ffffff;
     font-size: 12px;
     font-weight: bold;
@@ -109,8 +109,8 @@ ${props =>
 
 export const Overlay = styled.div`
 background: #ff416c;
-background: -webkit-linear-gradient(to right, #ff4b2b, #ff416c);
-background: linear-gradient(to right, #ff4b2b, #ff416c);
+background: -webkit-linear-gradient(to right, #008b80, #5aaca5);
+background: linear-gradient(to right, #008b80, #5aaca5);
 background-repeat: no-repeat;
 background-size: cover;
 background-position: 0 0;
@@ -152,7 +152,8 @@ ${props => (props.signinIn !== true ? `transform: translateX(50%);` : null)}
 
  export const Paragraph = styled.p`
  font-size: 14px;
-   font-weight: 100;
+   color: #fff;
+   font-weight: 300;
    line-height: 20px;
    letter-spacing: 0.5px;
    margin: 20px 0 30px

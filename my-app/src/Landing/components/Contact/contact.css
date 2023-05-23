@@ -37,6 +37,7 @@
   }
   .contacts input::placeholder{
     color: #116059a4;
+    background-color: #5aaca5;
   }
   form .flexSB input:nth-child(1) {
     margin-right: 10px;

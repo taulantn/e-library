@@ -11,8 +11,21 @@
   display: flex;
   column-gap: 1.3rem;
 }
-
-.nav__item a {
+.nav__right button{
+  font-weight: 500;
+  font-size: 1.1rem;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #fff;
+  width: 170px;
+  height: 55px;
+  /* border-radius: 0.5rem; */
+  background-color: #17bf9e;
+  transition: 0.3s;
+}
+.nav__right button:only-child{
+  border-radius: 30px;
+}
+.nav__item button{
   font-weight: 500;
   font-size: 1.1rem;
   color: #0a2b1e;
@@ -20,10 +33,15 @@
   transition: 0.3s;
 }
 
-.nav__item a:hover {
+.nav__item button:hover {
   color: #17bf9e;
 }
-
+.nav__right button:hover{
+  background-color: #fff;
+  color:#17bf9e;
+  font-weight: 500;
+  border: 1px solid #17bf9e;
+}
 .nav__right p {
   font-weight: 500;
   color: #0a2b1e;
