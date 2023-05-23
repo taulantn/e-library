@@ -59,7 +59,7 @@ const navLinks = [
                 {navLinks.map((item, index) => (
                   <li key={index} className="nav__item">
                     {/* <a href={item.url}>{item.display}</a> */}
-                    <button onClick={item.url}>{item.display}</button>
+                    <button className="nav__list-btn" onClick={item.url}>{item.display}</button>
                   </li>
                 ))}
               </ul>

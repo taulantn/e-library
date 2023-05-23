@@ -43,6 +43,19 @@
 .mobile__menu {
   display: none;
 }
+.nav__list-btn{
+  height: 20px;
+  width: 80px;
+  background: linear-gradient(to right);
+  color: #000000;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  background-color: #f0f8ff00;
+}
 
 @media only screen and (max-width: 991px) {
   .nav__menu {
