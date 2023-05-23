@@ -12,6 +12,8 @@ import Categories from './Admin/pages/Category';
 import Users from './Admin/pages/Users';
 import Home from './Landing/pages/Home';
 import DashboardContent from './Admin/pages/Dashboard';
+import AboutUss from './Landing/components/About-us/About-us';
+
 
 function Dashboard() {
   return (
@@ -35,6 +37,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about-us" element={<AboutUss />} />
         <Route path="/*" element={<Dashboard />} />
       </Routes>
     </Router>

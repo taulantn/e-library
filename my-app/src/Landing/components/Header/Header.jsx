@@ -1,6 +1,18 @@
 import React, { useRef } from "react";
 import { Container } from "reactstrap";
 import "./header.css";
+import {Routes, Route, useNavigate} from 'react-router-dom';
+import AboutUs from "../About-us/AboutUs";
+
+
+const Header = () => {
+
+  const navigate = useNavigate();
+
+const navigateToAboutUs = () => {
+  // navigate to /users
+  navigate('/about-us');
+};
 
 const navLinks = [
   {
@@ -9,7 +21,7 @@ const navLinks = [
   },
   {
     display: "About",
-    url: "#",
+    url: navigateToAboutUs,
   },
 
   {
@@ -26,7 +38,7 @@ const navLinks = [
   },
 ];
 
-const Header = () => {
+
   const menuRef = useRef();
 
   const menuToggle = () => menuRef.current.classList.toggle("active__menu");
@@ -46,7 +58,8 @@ const Header = () => {
               <ul className="nav__list">
                 {navLinks.map((item, index) => (
                   <li key={index} className="nav__item">
-                    <a href={item.url}>{item.display}</a>
+                    {/* <a href={item.url}>{item.display}</a> */}
+                    <button onClick={item.url}>{item.display}</button>
                   </li>
                 ))}
               </ul>
@@ -65,8 +78,13 @@ const Header = () => {
             </span>
           </div>
         </div>
+        <Routes>
+                    <Route path="/about-us" element={<AboutUs/>} />
+                    
+                </Routes>
       </Container>
     </header>
+    
   );
 };
 
