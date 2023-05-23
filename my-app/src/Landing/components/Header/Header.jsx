@@ -6,6 +6,7 @@ import AboutUs from "../About-us/AboutUs";
 import Contact from "../Contact/Contact";
 import Home from "../../pages/Home";
 
+import logo from "../../assests/images/green-logo.png"
 
 const Header = () => {
 
@@ -68,7 +69,8 @@ const navLinks = [
         <div className="navigation d-flex align-items-center justify-content-between">
           <div className="logo">
             <h2 className=" d-flex align-items-center gap-1">
-              <i class="ri-book-mark-line"></i> eLibrary
+              <img src={logo}
+               alt="ELibrary Logo" />
             </h2>
           </div>
 
@@ -77,7 +79,6 @@ const navLinks = [
               <ul className="nav__list">
                 {navLinks.map((item, index) => (
                   <li key={index} className="nav__item">
-                    {/* <a href={item.url}>{item.display}</a> */}
                     <button className="nav__list-btn" onClick={item.url}>{item.display}</button>
                   </li>
                 ))}
@@ -86,7 +87,7 @@ const navLinks = [
 
             <div className="nav__right">
               <p className="mb-0 d-flex align-items-center gap-2">
-                <i class="ri-phone-line"></i> +88 0123456789
+              <button className="nav__list-btn" onClick={navigateToLoginSignUp}>Log In / Sign Up</button>
               </p>
             </div>
           </div>

@@ -14,6 +14,7 @@ import Home from './Landing/pages/Home';
 import DashboardContent from './Admin/pages/Dashboard';
 import AboutUss from './Landing/components/About-us/About-us';
 import Contact from './Landing/pages/Contact';
+import Login from "./Landing/components/LogIn-SignUp/index"
 
 
 function Dashboard() {
@@ -40,7 +41,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<AboutUss />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/*" element={<Dashboard />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/login-signup" element={< Login/>} />
       </Routes>
     </Router>
   );

@@ -1,10 +1,13 @@
 import React from 'react';
 
 import "./about-us.css";
-
+import Header from '../Header/Header';
 const AboutUs = () => {
   return (
+    <div>
+      <Header/>
     <div className="about-us-container">
+
       <h1>About Us</h1>
       <p>
         Welcome to our company! We are a dedicated team of professionals
@@ -23,6 +26,7 @@ const AboutUs = () => {
         Get in touch with us today to learn more about our offerings and how
         we can help you achieve your goals.
       </p>
+    </div>
     </div>
   );
 };
