@@ -13,6 +13,7 @@ import Users from './Admin/pages/Users';
 import Home from './Landing/pages/Home';
 import DashboardContent from './Admin/pages/Dashboard';
 import AboutUss from './Landing/components/About-us/About-us';
+import Contact from './Landing/pages/Contact';
 
 
 function Dashboard() {
@@ -38,6 +39,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<AboutUss />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/*" element={<Dashboard />} />
       </Routes>
     </Router>

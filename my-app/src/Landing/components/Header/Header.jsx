@@ -3,6 +3,8 @@ import { Container } from "reactstrap";
 import "./header.css";
 import {Routes, Route, useNavigate} from 'react-router-dom';
 import AboutUs from "../About-us/AboutUs";
+import Contact from "../Contact/Contact";
+import Home from "../../pages/Home";
 
 
 const Header = () => {
@@ -14,10 +16,27 @@ const navigateToAboutUs = () => {
   navigate('/about-us');
 };
 
+const navigateToContact = () => {
+  
+  navigate('/contact');
+};
+const navigateToHome = () => {
+  
+  navigate('/');
+};
+const navigateToBooks = () => {
+  
+  navigate('/');
+};
+const navigateToCourses = () => {
+  
+  navigate('/');
+};
+
 const navLinks = [
   {
     display: "Home",
-    url: "#",
+    url: navigateToHome,
   },
   {
     display: "About",
@@ -26,15 +45,15 @@ const navLinks = [
 
   {
     display: "Books",
-    url: "#",
+    url: navigateToBooks,
   },
   {
     display: "Courses",
-    url: "#",
+    url: navigateToCourses,
   },
   {
-    display: "Blog",
-    url: "#",
+    display: "Contact",
+    url: navigateToContact,
   },
 ];
 
@@ -79,7 +98,11 @@ const navLinks = [
           </div>
         </div>
         <Routes>
+                    <Route path="/home" element={<Home/>} />
                     <Route path="/about-us" element={<AboutUs/>} />
+                    <Route path="/books" element={<div></div>} />
+                    <Route path="/courses" element={<div></div>} />
+                    <Route path="/contact" element={<Contact/>} />
                     
                 </Routes>
       </Container>

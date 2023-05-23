@@ -8,3 +8,8 @@
   flex-direction: column;
   background-color: #F0F2F5;
 }
+.flexSB {
+  display: flex;
+  justify-content: space-between;
+}
+
