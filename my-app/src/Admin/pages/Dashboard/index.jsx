@@ -64,7 +64,7 @@ function DashboardContent () {
                        />
                   <CardBody>
                       <CardTitle tag="h5">BOOKS</CardTitle>
-                      <CardText>Check Users Data!</CardText>
+                      <CardText>Check Books Data!</CardText>
                       <Button onClick={navigateToBooks}>CHECK BOOKS</Button>
                   </CardBody>
               </Card>

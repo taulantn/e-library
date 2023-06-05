@@ -1,12 +1,12 @@
 import React, { useRef } from "react";
 import { Container } from "reactstrap";
-import "./header.css";
 import {Routes, Route, useNavigate} from 'react-router-dom';
 import AboutUs from "../About-us/AboutUs";
 import Contact from "../Contact/Contact";
 import Home from "../../pages/Home";
-
+import BooksPage from "../../pages/Books"
 import logo from "../../assests/images/green-logo.png"
+import "./header.css";
 
 const Header = () => {
 
@@ -23,8 +23,7 @@ const navigateToAboutUs = () => {
 };
 
 const navigateToBooks = () => {
-  
-  navigate('/');
+  navigate('/books-page');
 };
 
 const navigateToCourses = () => {
@@ -111,7 +110,7 @@ const navLinks = [
         <Routes>
                     <Route path="/home" element={<Home/>} />
                     <Route path="/about-us" element={<AboutUs/>} />
-                    <Route path="/books" element={<div></div>} />
+                    <Route path="/books-page" element={<BooksPage/>} />
                     <Route path="/courses" element={<div></div>} />
                     <Route path="/contact" element={<Contact/>} />
                     

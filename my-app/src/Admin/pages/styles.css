@@ -190,6 +190,7 @@ td span {
 
 
 .dashboard-card .card{
+    width: 100%;
    padding: 15px;
    border-radius: 10px;
    background-color: #2D83B5;

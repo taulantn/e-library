@@ -1,0 +1,130 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+.book-card {
+    width: 23%;
+ }
+
+
+.book-card .card{
+   padding: 15px;
+   border-radius: 10px;
+   background-color: rgb(245 171 79);
+}
+
+.book-card .book-card-img{
+    width:200px;
+    height:200px;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+.book-card .card .card-body  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+ }
+
+ .book-card .card .card-body .card-text, .book-card .card .card-body .card-title {
+    color: #F0F2F5;
+ }
+
+ .book-card .card .card-body  button{
+    padding: 0.8em;
+    padding-left: 2em;
+    padding-right: 2em;
+    cursor: pointer;
+    color: #015C92;
+    font-size: 0.9rem;
+    font-weight: 700;
+    border-radius: 8px;
+    text-transform: uppercase;
+    border: 1px solid #eaf7ff;
+    background-color: #eaf7ff;
+    margin-left: auto;
+    margin-right: auto;
+ }
+
+ .book-card-container{
+    display: flex;
+    max-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+ }
+
+ .book-content-nav{
+    max-width: 1320px;
+    height: 40px;
+    margin: 50px auto 30px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.nav-categories{
+    width: 70%;
+}
+.nav-categories ul{
+    display: flex;
+}
+.nav-categories ul li{
+    margin: 0 15px 0 15px;
+    list-style: none;
+} 
+.nav-categories ul li button{
+    border: 0px;
+    border-bottom: 1px #333 solid;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0);
+}
+.nav-categories ul li button:hover{
+    background-color: #17bf9d23;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.search-input{
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+}
+.bi-search{
+    margin-right: 10px;
+}
+
+.book-card{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.card{
+    width: 23%;
+    margin-bottom: 1.5%;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: rgb(245 171 79);
+}
+
+.book-content-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.book-content-footer .pagination {
+    padding: 0.5rem;
+    margin: 0.2rem;
+    border-radius: 5px;
+    background-color: #F0F2F5;
+    cursor: pointer;
+}
+.book-content-footer .active-pagination {
+    padding: 0.5rem;
+    margin: 0.2rem;
+    border-radius: 5px;
+    color: #FFFFFF;
+    background-color: #17bf9e;
+    cursor: pointer;
+}

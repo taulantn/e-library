@@ -2,6 +2,8 @@ import React from "react";
 import { Container, Row, Col, ListGroup, ListGroupItem } from "reactstrap";
 
 import "./footer.css";
+import logo from "../../assests/images/green-logo.png"
+
 
 const footerQuickLinks = [
   {
@@ -51,9 +53,12 @@ const Footer = () => {
       <Container>
         <Row>
           <Col lg="3" md="6" className="mb-4">
+          <div className="footer-logo">
             <h2 className=" d-flex align-items-center gap-1">
-              <i class="ri-book-mark-line"></i> eLibrary.
+              <img src={logo}
+               alt="ELibrary Logo" />
             </h2>
+          </div>
 
             <div className="follows">
               <p className="mb-0">Follow us on social media</p>
