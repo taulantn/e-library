@@ -5,6 +5,7 @@ import all_books from '../../../Admin/constants/books';
 import all_categories from '../../../Admin/constants/categories';
 import {calculateRange, sliceData} from '../../../Admin/utils/table-pagination';
 import './books.css';
+
 const Books = () => {
 
     const [search, setSearch] = useState('');
@@ -85,12 +86,9 @@ const Books = () => {
                 </div>  
                 : null}    
 
-              {/* <Routes>
-                    <Route path="/users" element={<Users/>} />
-                    <Route path="/books" element={<Books/>} />
-                    <Route path="/categories" element={<Categories/>} />
-                    <Route path="/orders" element={<Orders/>} />
-                </Routes> */}
+              <Routes>
+                    
+                </Routes>
               </div>
             </div>
             {books.length !== 0 ?

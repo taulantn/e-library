@@ -13,7 +13,6 @@ namespace ELibraryBE.Models
         public decimal Discount { get; set; }
         public int Quantity { get; set; }
         public decimal TotalPrice { get; set; }
-
-
+        public int BookID { get; set; }
     }
 }

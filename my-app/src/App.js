@@ -16,7 +16,7 @@ import AboutUss from './Landing/components/About-us/About-us';
 import Contact from './Landing/pages/Contact';
 import Login from "./Landing/components/LogIn-SignUp/index"
 import BooksPage from './Landing/pages/Books';
-
+// import BookDetail from './Landing/components/Books-Details'
 function Dashboard() {
   return (
     <div className='dashboard-container'>
@@ -44,6 +44,7 @@ function App() {
         <Route path="/books-page" element={<BooksPage/>} />
         <Route path="/*" element={<Dashboard />} />
         <Route path="/login-signup" element={< Login/>} />
+        {/* <Route path="/book-details" element={< BookDetail/>} /> */}
       </Routes>
     </Router>
   );

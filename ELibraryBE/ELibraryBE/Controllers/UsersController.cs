@@ -37,15 +37,29 @@ namespace ELibraryBE.Controllers
         public Response login(Users users)
         {
             DAL dal = new DAL();
-            SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("").ToString());
+            SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("EBookCS").ToString());
             Response response = dal.login(users, connection);
             return response;
         }
+
+        [HttpPost]
+        [Route("viewUser")]
         public Response viewUser(Users users)
         {
             DAL dal = new DAL();
             SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("").ToString());
             Response response = dal.viewUser(users, connection);
+            return response;
+        }
+
+        [HttpPost]
+        [Route("updateProfile")]
+
+        public Response updateProfile(Users users)
+        {
+            DAL dal = new DAL();
+            SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("EBookCS").ToString());
+            Response response = dal.updateProfile(users, connection);
             return response;
         }
     }
