@@ -213,6 +213,80 @@ namespace ELibraryBE.Models
             }
             return response;
         }
+        public Response addUpdateBook(Books books, SqlConnection connection)
+        {
+            Response response = new Response();
+            SqlCommand cmd = new SqlCommand("sp_addUpdateBook", connection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@Name", books.Name);
+            cmd.Parameters.AddWithValue("@Author", books.Author);
+            cmd.Parameters.AddWithValue("@UnitPrice", books.UnitPrice);
+            cmd.Parameters.AddWithValue("@Discount", books.Discount);
+            cmd.Parameters.AddWithValue("@Quantity", books.Quantity);
+            cmd.Parameters.AddWithValue("@ExpDate", books.ExpDate);
+            cmd.Parameters.AddWithValue("@ImageUrl", books.ImageUrl);
+            cmd.Parameters.AddWithValue("@Status", books.Status);
+            cmd.Parameters.AddWithValue("@Type", books.Type);
+
+            connection.Open();
+            int i = cmd.ExecuteNonQuery();
+            connection.Close();
+            if(i > 0)
+            {
+                response.StatusCode = 200;
+                response.StatusMessage = "Book inserted successfully";
+            }
+            else
+            {
+                response.StatusCode = 100;
+                response.StatusMessage = "Book did not save. Try Again";
+            }
+            return response;
+        }
+        public Response userList(SqlConnection connection)
+        {
+            Response response = new Response();
+            List<Users> listUsers = new List<Users>();
+            SqlDataAdapter da = new SqlDataAdapter("sp_UserList", connection);
+            da.SelectCommand.CommandType = CommandType.StoredProcedure;
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            if (dt.Rows.Count > 0)
+            {
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    Users user = new Users();
+                    user.ID = Convert.ToInt32(dt.Rows[i]["ID"]);
+                    user.FirstName = Convert.ToString(dt.Rows[i]["FirstName"]);
+                    user.LastName = Convert.ToString(dt.Rows[i]["LastName"]);
+                    user.Password = Convert.ToString(dt.Rows[i]["Password"]);
+                    user.Email = Convert.ToString(dt.Rows[i]["Email"]);
+                    user.Fund = Convert.ToDecimal(dt.Rows[i]["Fund"]);
+                    user.Status = Convert.ToInt32(dt.Rows[i]["Status"]);
+                    user.CreatedOn = Convert.ToDateTime(dt.Rows[i]["CreatedOn"]);
+                    listUsers.Add(user);
+                }
+                if (listUsers.Count > 0)
+                {
+                    response.StatusCode = 200;
+                    response.StatusMessage = "User details fetched.";
+                    response.listUsers = listUsers;
+                }
+                else
+                {
+                    response.StatusCode = 100;
+                    response.StatusMessage = "User details not available.";
+                    response.listUsers = null;
+                }
+            }
+            else
+            {
+                response.StatusCode = 100;
+                response.StatusMessage = "User details not available.";
+                response.listUsers = null;
+            }
+            return response;
+        }
     }
 }
 

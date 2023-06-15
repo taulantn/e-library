@@ -636,19 +636,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Shqipe\\.nuget\\packages\\": {}
+    "C:\\Users\\Feston\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Shqipe\\OneDrive\\Desktop\\e-library-lab2\\e-library\\ELibraryBE\\ELibraryBE\\ELibraryBE.csproj",
+      "projectUniqueName": "C:\\Users\\Feston\\OneDrive\\Desktop\\Lab2\\testrepository\\e-library\\ELibraryBE\\ELibraryBE\\ELibraryBE.csproj",
       "projectName": "ELibraryBE",
-      "projectPath": "C:\\Users\\Shqipe\\OneDrive\\Desktop\\e-library-lab2\\e-library\\ELibraryBE\\ELibraryBE\\ELibraryBE.csproj",
-      "packagesPath": "C:\\Users\\Shqipe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Shqipe\\OneDrive\\Desktop\\e-library-lab2\\e-library\\ELibraryBE\\ELibraryBE\\obj\\",
+      "projectPath": "C:\\Users\\Feston\\OneDrive\\Desktop\\Lab2\\testrepository\\e-library\\ELibraryBE\\ELibraryBE\\ELibraryBE.csproj",
+      "packagesPath": "C:\\Users\\Feston\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Feston\\OneDrive\\Desktop\\Lab2\\testrepository\\e-library\\ELibraryBE\\ELibraryBE\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Shqipe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Feston\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -701,7 +701,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.416\\RuntimeIdentifierGraph.json"
       }
     }
   }
