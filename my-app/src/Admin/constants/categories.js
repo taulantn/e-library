@@ -20,3 +20,6 @@ const all_categories = [
 ]
 
 export default all_categories;
+
+//651651651jkkl
+//9+84+5hjkjlkjlk
